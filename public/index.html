@@ -7,22 +7,69 @@
     <link rel="stylesheet" href="style.css">
     <script defer type="text/javascript" src="socket.io/socket.io.js"></script>
     <script defer type="text/javascript" src="code.js"></script>
-</head>
+</head>`    `
 <body>
+        
     <div class="app">
+
+        <!-- Форма регистрации-->
+
         <div class="screen join-screen active">
             <div class="form">
                 <h2>Join Chatroom</h2>
-                <div class="form-input">
-                    <label>Username</label>
-                    <input type="text" id="username">
+                <!--Форма без логина-->
+                <div id="enterWithoutLog" class="active">
+                    <div class="form-input">
+                        <label class="active">Username</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="logreg-div">
+                        <p  class="logreg-link " id="registration">Registration</p>
+                        <p  class="logreg-link " id="login">Log in</p>
+                    </div>
+                    <div class="form-input">
+                        <button id="join-user" class="active">Join</button>
+                    </div>
                 </div>
-                <div class="form-input">
-                    <button id="join-user">Join</button>
+                <!---------->
+
+                <!--Форма регистрации-->
+                <div id="enterRegistration" class="unactive">
+                    <div class="form-input">
+                        <label class="active">Username</label>
+                        <input type="text" id="usernameReg">
+                        <label class="active">Password</label>
+                        <input type="text" id="passwordReg">
+                    </div>
+                    <p  class="logreg-link " id="backReg">Go back</p>
+                    <div class="form-input">
+                        <button id="reg-user" class="active">Register</button>
+                    </div>
                 </div>
+                <!--------->
+
+                <!--Форма логина-->
+                <div id="enterLogin" class="unactive">
+                    <div class="form-input">
+                        <label class="active">Username</label>
+                        <input type="text" id="usernameLog">
+                        <label class="active">Password</label>
+                        <input type="text" id="passwordLog">
+                        <p  class="logreg-link " id="backLog">Go back</p>
+                    </div>
+                    <div class="form-input">
+                        <button id="log-user" class="active">Log in</button>
+                    </div>
+                </div>
+                <!--------->
             </div>
 
         </div>
+
+        <!------------------------------->
+
+        <!--Приложение мессенджера-->
+
         <div class="screen chat-screen ">
             <div class="header">
                 <div class="logo">Chatroom</div>
@@ -36,6 +83,9 @@
                 <button id="send-message">Send</button>
             </div>
         </div>
+
+        <!------------------------------->
+        
     </div>
 </body>
 </html>
