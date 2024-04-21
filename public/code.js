@@ -119,7 +119,15 @@
     let logLink = app.querySelector('#login');
     let backRegLink = app.querySelector('#backReg');
     let backLogLink = app.querySelector('#backLog')
+    
+    //input-формы
 
+    let logInputLog = app.querySelector('#usernameLog').value;
+    let logInputPass = app.querySelector('#passwordLog').value;
+    //кнопки подключения
+
+    let regButton = app.querySelector('#reg-user');
+    let logButton = app.querySelector('#log-user');
     //Ссылки регистрации
 
     regLink.addEventListener('mouseover', function(){
@@ -148,9 +156,31 @@
     logLink.addEventListener('click', function(){
         withoutForm.classList.add('unactive');
         logForm.classList.remove('unactive');
+        
     });
     backLogLink.addEventListener('click', function(){
         withoutForm.classList.remove('unactive');
         logForm.classList.add('unactive');
     });
+    
+    regButton.addEventListener('click', function(){
+        socket.emit('addUser', {username: app.querySelector('#usernameReg').value, password:app.querySelector('#passwordReg').value});
+        if(username.length  === 0){
+            return;
+        }
+        
+        uname = app.querySelector('#usernameReg').value;
+        app.querySelector(".join-screen").classList.remove("active");
+        app.querySelector(".chat-screen").classList.add("active");
+    })
+    logButton.addEventListener('click', function(){
+        socket.emit('logUser', {username: app.querySelector('#usernameLog').value, password:app.querySelector('#passwordLog').value});
+        console.log(socket.emit('logUser', {username: app.querySelector('#usernameLog').value, password:app.querySelector('#passwordLog').value}));
+        if(username.length  === 0){
+            return;
+        }
+
+    })
+
+
 })();
