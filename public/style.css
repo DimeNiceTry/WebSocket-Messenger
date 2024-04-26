@@ -57,19 +57,37 @@ body{
     font-size: 16px;
     border-radius: 5px;
 }
+
 .logreg-div{
     display: flex;
 
     justify-content: space-between;
 }
 .logreg-link{
+    
     text-decoration: none;
     color: #83A000;
+}
+.main-header{
+    text-align: center;
+    margin-left: 10px;
 }
 .screen .form-input button:active{
     background: #83A000;
 }
-
+.screen .form button:active{
+    background: #83A000;
+}
+.screen .form button{
+    padding: 10px 20px;
+    background: #9FB82E;
+    color: #192612;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
 .screen .form-input button{
     padding: 10px 20px;
     background: #9FB82E;
@@ -113,7 +131,7 @@ body{
 .chat-screen .messages {
     width: 100%;
     height: calc(100% - 100px);
-    background: #ecffd0
+    background: #ecffd0;
     overflow: auto;
 }
 .chat-screen .messages .message {
@@ -173,4 +191,17 @@ body{
     outline: none;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.incorrect{
+    margin-bottom: 25px;
+}
+
+.usernameMess{
+    color: #fff;
+    font-weight: 400;
+}
+.join-user{
+    position: absolute;
+    right: 50%;
 }

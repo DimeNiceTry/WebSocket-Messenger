@@ -16,19 +16,18 @@
 
         <div class="screen join-screen active">
             <div class="form">
-                <h2>Join Chatroom</h2>
+                <div class="main-header"><h2>Messenger</h2></div>
+                
                 <!--Форма без логина-->
                 <div id="enterWithoutLog" class="active">
                     <div class="form-input">
-                        <label class="active">Username</label>
-                        <input type="text" id="username">
+                        
                     </div>
                     <div class="logreg-div">
-                        <p  class="logreg-link " id="registration">Registration</p>
-                        <p  class="logreg-link " id="login">Log in</p>
+                        <button  class="logreg-link pair-button" id="registration">Register</button>
+                        <button  class="logreg-link pair-button" id="login">Log in</button>
                     </div>
                     <div class="form-input">
-                        <button id="join-user" class="active">Join</button>
                     </div>
                 </div>
                 <!---------->
@@ -43,6 +42,7 @@
                     </div>
                     <p  class="logreg-link " id="backReg">Go back</p>
                     <div class="form-input">
+                        <div id="incorrectReg" class="incorrect"></div>
                         <button id="reg-user" class="active">Register</button>
                     </div>
                 </div>
@@ -58,6 +58,7 @@
                         <p  class="logreg-link " id="backLog">Go back</p>
                     </div>
                     <div class="form-input">
+                        <div id="incorrect" class="incorrect"></div>
                         <button id="log-user" class="active">Log in</button>
                     </div>
                 </div>
@@ -73,6 +74,7 @@
         <div class="screen chat-screen ">
             <div class="header">
                 <div class="logo">Chatroom</div>
+                <p id="uname" class="usernameMess"></p>    
                 <button id="exit-chat">Exit</button>
             </div>
             <div class="messages">
