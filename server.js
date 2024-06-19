@@ -8,7 +8,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const {Pool} = require('pg');   //импорт pg для работы с базами данных типа Postgres
 
 let pool = new Pool({
-}); //подкготовка к подключению к удалённой базе данных aiven
+    connectionString: //There is your connection string dude
+});
 
 pool.query('SELECT NOW()', (err, res) => { 
     if (err) {
