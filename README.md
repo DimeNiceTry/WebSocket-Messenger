@@ -49,7 +49,7 @@ let pool = new Pool({
 Замените комментарий на вашу строку подключения в формате:
 ```javascript
 let pool = new Pool({
-    connectionString: "postgresql://username:password@hostname:port/database"
+    connectionString: ""
 });
 ```
 
