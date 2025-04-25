@@ -1,17 +1,17 @@
 {
-  "name": "chatroom",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
     "pg": "^8.11.5",
     "socket.io": "^4.7.5"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "chatroom",
+  "description": "simple messenger app using socket.io, JS and HTML-CSS",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

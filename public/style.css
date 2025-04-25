@@ -18,7 +18,7 @@ body{
     width: 100%;
     height: 100%;
     max-width: 600px;
-    background: #ecffd0;
+    background: #fff;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
 }
@@ -131,7 +131,7 @@ body{
 .chat-screen .messages {
     width: 100%;
     height: calc(100% - 100px);
-    background: #ecffd0;
+    background: #fefefe;
     overflow: auto;
 }
 .chat-screen .messages .message {
@@ -141,7 +141,7 @@ body{
 .chat-screen .messages .message > div {
     max-width: 80%;
     padding: 6px 6px 6px 6px;
-    background: #fff;
+    background: #c2c8a7;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0, .05);
     border-radius: 5px;
 }

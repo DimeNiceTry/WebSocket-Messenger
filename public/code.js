@@ -136,7 +136,6 @@
                 <div class="text">${message.text}</div>
             </div>
             `;
-            socket.emit('addMessage', {value: message.text, uname: message.username, type: 'messages'})
 
             messageContainer.appendChild(el);
         }
